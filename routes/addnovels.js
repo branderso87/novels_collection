@@ -3,7 +3,9 @@ const router = express.Router()
 const Novel = require('../models/novels')
 
 router.get('/novels/new', function (req, res) {
-  res.render('novels/new')
+  res.render('addnovels', {
+    novel: novel
+  })
 })
 
 router.post('/novels', function (req, res) {
@@ -22,7 +24,7 @@ router.post('/novels', function (req, res) {
     res.json(novel)
   })
 }).catch(function (validationError) {
-    res.render('novels/new', {
+    res.render('addnovels', {
       novel: novel,
       valdiationError: validationError
     })
