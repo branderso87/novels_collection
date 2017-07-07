@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/main.css">
+    <title>Fantasy Novels - Add New</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Top Fantasy Novels with Badass Female Characters</h1>
+        <ul>
+          <li><a href = "/index">Home</a></li>
+          <li><a href="/novels/new">Add a Novel</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="add-new">
+      <form class="" action="/novels" method="post">
+        <div class="">
+          <input type="text" name="title" placeholder = "title">
+          <input type="text" name="author" placeholder = "author">
+          <input type="number" name="publication" value="publication date">
+          <input type="text" name="imagelink" value="image link">
+          <input type="text" name="buylink" value="buy link">
+          <h3>Characters:</h3>
+          <ul>
+            <li><input type="text" name="femalemain" value="female main character"></li>
+            <li><input type="text" name="femalesupport" value="supporting female characters"></li>
+            <li><input type="text" name="male" value="male characters"></li>
+          </ul>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

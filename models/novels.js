@@ -1,11 +1,13 @@
 const mongoose = require('mongoose')
 
 const novelsSchema = new mongoose.Schema({
-  name: String,
-  author: String,
+  name: {type: String, required: true},
+  author: {type: String, required: true},
   publication_date: Number,
+  img_url: {type: String, required: true},
+  buy_url: String,
   characters: [{
-    female_main: String,
+    female_main: {type: String, required: true},
     female_support: [String],
     male: [String]
   }]
@@ -13,4 +15,4 @@ const novelsSchema = new mongoose.Schema({
 
 const Novel = mongoose.model('Novel', novelsSchema)
 
-module.export = Novel
+module.exports = Novel

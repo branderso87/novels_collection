@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/main.css">
+    <title>Fantasy Novels with Strong Female Characters</title>
+  </head>
+  <body>
+    <nav>
+      <h1>Top Fantasy Novels with Badass Female Characters</h1>
+      <ul>
+        <li><a href = "/index">Home</a></li>
+        <li><a href="/novels/new">Add a Novel</a></li>
+      </ul>
+    </nav>
+    <div class="novelcards">
+      {{#novels}}
+        <a href = "{{buy_url}}"><img src = "{{img_url}}"></a>
+        <h2>{{name}}</h2>
+        <h3>{{publication_date}}</h3>
+        <a href="/novels/_id/edit">Edit</a>
+      {{/novels}}
+    </div>
+  </body>
+</html>
